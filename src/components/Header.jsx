@@ -1,15 +1,16 @@
 // Header.js
 import React from 'react';
-import { Link,Outlet } from 'react-router-dom';
-
+import { Link,Outlet,NavLink } from 'react-router-dom';
+import styles from '../css/header.module.css'
 
 const Header = () => {
   return (
-    <div>
-    <header>
-      <h1>Habit Tracker</h1>
-      <nav>
-        <Link to="/">Home</Link>
+    <div >
+    <header className={styles.container}>
+      <h1 className={styles.title}>Habit Tracker</h1>
+      <br />
+      <nav className={styles.nav}>
+        <NavLink to="/" className={({isActive})=>isActive? `${styles.link} ${styles.active}`:styles.link}  >Home</NavLink>
       </nav>
     </header>
     <Outlet />

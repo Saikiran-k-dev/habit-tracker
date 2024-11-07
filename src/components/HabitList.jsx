@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import HabitCard from './HabitCard';
 
+
 const HabitList = () => {
   const habits = useSelector((state) => state.habits);
   console.log(habits)

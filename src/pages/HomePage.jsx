@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { addHabit } from '../features/habits/habitSlice'
 import HabitList from '../components/HabitList'
+import styles from '../css/homePage.module.css'
 
 const HomePage = () =>  {
     const [habitName,setHabitName] = useState('')
@@ -16,7 +17,7 @@ const HomePage = () =>  {
 
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Habit Tracker</h2>
       <input 
       type="text"
